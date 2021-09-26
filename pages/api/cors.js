@@ -1,3 +1,4 @@
+import axios from 'axios'
 import Cors from 'cors'
 import initMiddleware from '../../lib/init-middleware'
 
@@ -24,9 +25,9 @@ export default async function handler(req, res) {
       headers: req.query?.flomo_session ? { cookie: `flomo_session=${req.query?.flomo_session}` } : undefined,
       withCredentials: true,
     })
-    res.json(response)
+    res.json({response})
   } catch (error) {
-    res.json(error)
+    res.json({error})
   }
   // Rest of the API logic
   // res.json({ message: 'Hello Everyone!' })
