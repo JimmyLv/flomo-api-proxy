@@ -27,6 +27,7 @@ export default async function handler(req, res) {
     })
     res.json({response})
   } catch (error) {
+    console.error(error)
     res.json({error})
   }
   // Rest of the API logic
