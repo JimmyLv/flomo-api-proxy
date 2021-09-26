@@ -25,10 +25,10 @@ export default async function handler(req, res) {
       headers: req.query?.flomo_session ? { cookie: `flomo_session=${req.query?.flomo_session}` } : undefined,
       withCredentials: true,
     })
-    res.json({response: response.data})
+    res.json(response.data)
   } catch (error) {
     console.error(error)
-    res.json({error})
+    res.end(error.message)
   }
   // Rest of the API logic
   // res.json({ message: 'Hello Everyone!' })
