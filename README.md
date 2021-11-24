@@ -1,5 +1,7 @@
 # Flomo API Routes 
 
+https://user-images.githubusercontent.com/4997466/143256391-843cc4e7-96a6-4b7b-9a85-cbc0eb897e48.mp4
+
 ## Getting Start
 
 e.g. Integrated with Roam Research [SmartBlocks](https://roamjs.com/extensions/roam42/smartblocks)
