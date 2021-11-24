@@ -2,7 +2,7 @@
 
 https://user-images.githubusercontent.com/4997466/143256391-843cc4e7-96a6-4b7b-9a85-cbc0eb897e48.mp4
 
-## Getting Start
+## Getting Started
 
 e.g. Integrated with Roam Research [SmartBlocks](https://roamjs.com/extensions/roam42/smartblocks)
 
@@ -14,7 +14,7 @@ function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 }
 
-const flomo_session = ''; // add yours
+const flomo_session = ''; // todo: add your session key
 var text = '';
 var settings = {
   "url": `https://flomo-api-proxy.vercel.app/api/flomo?flomo_session=${flomo_session}`,
