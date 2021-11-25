@@ -6,7 +6,7 @@ https://user-images.githubusercontent.com/4997466/143256391-843cc4e7-96a6-4b7b-9
 
 e.g. Integrated with Roam Research [SmartBlocks](https://roamjs.com/extensions/roam42/smartblocks)
 
-```js
+```shell
 <%SET:result,<%JA:```javascript
 roam42.loader.addScriptToPage('turndown', 'https://unpkg.com/turndown/dist/turndown.js');
 var turndownService = new TurndownService();
