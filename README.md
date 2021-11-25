@@ -7,6 +7,7 @@ https://user-images.githubusercontent.com/4997466/143256391-843cc4e7-96a6-4b7b-9
 e.g. Integrated with Roam Research [SmartBlocks](https://roamjs.com/extensions/roam42/smartblocks)
 
 ```js
+<%SET:result,<%JA:```javascript
 roam42.loader.addScriptToPage('turndown', 'https://unpkg.com/turndown/dist/turndown.js');
 var turndownService = new TurndownService();
 
@@ -14,7 +15,7 @@ function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 }
 
-const flomo_session = ''; // todo: add your session key
+const flomo_session = 'eyJpdiI6IlVQbWZ0U0syS2RuaXRFaW1ZankwWkE9PSIsInZhbHVlIjoiNHpNOGNKNjdaRnpYdmZ4ZjR6V3J0cFwvUEtneGR3SkhCODJwQnBxMDA3OTV6VE5NdjZnaTU0SVRZbmZsUmJPVVIiLCJtYWMiOiJiMTRlZDRlMThlY2Q2MDJlNTFiMDQyMmI0YzVmMWEyNWYwMTk1N2QwYjUwYTNhMDEwMzYyZjYzNTE5MWVkYmZmIn0%3D';
 var text = '';
 var settings = {
   "url": `https://flomo-api-proxy.vercel.app/api/flomo?flomo_session=${flomo_session}`,
@@ -29,8 +30,7 @@ await $.ajax(settings).then(function (response) {
   const resource = response?.memos[random]?.content;
   text = turndownService.turndown(resource)
 }).catch(error =>  console.info({ error }));
-return JSON.stringify({text});
-
+return JSON.stringify({text});``` %>%><%J:return JSON.parse(result).text%>
 ```
 
 > How to find your Flomo session key?
