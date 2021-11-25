@@ -15,7 +15,7 @@ function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 }
 
-const flomo_session = 'eyJpdiI6IlVQbWZ0U0syS2RuaXRFaW1ZankwWkE9PSIsInZhbHVlIjoiNHpNOGNKNjdaRnpYdmZ4ZjR6V3J0cFwvUEtneGR3SkhCODJwQnBxMDA3OTV6VE5NdjZnaTU0SVRZbmZsUmJPVVIiLCJtYWMiOiJiMTRlZDRlMThlY2Q2MDJlNTFiMDQyMmI0YzVmMWEyNWYwMTk1N2QwYjUwYTNhMDEwMzYyZjYzNTE5MWVkYmZmIn0%3D';
+const flomo_session = 'eyJpdiI6Ilxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0%3D'; // todo: update to your session key
 var text = '';
 var settings = {
   "url": `https://flomo-api-proxy.vercel.app/api/flomo?flomo_session=${flomo_session}`,
@@ -36,6 +36,10 @@ return JSON.stringify({text});``` %>%><%J:return JSON.parse(result).text%>
 > How to find your Flomo session key?
 
 ![CleanShot 2021-11-24 at 22 19 41@2x](https://user-images.githubusercontent.com/4997466/143255420-d449b718-04f4-490a-8e11-07d8f8e6d569.png)
+
+> How to use [#SmartBlock](https://roamjs.com/extensions/roam42/smartblocks) in Roam Research?
+
+![CleanShot 2021-11-25 at 22 52 02@2x](https://user-images.githubusercontent.com/4997466/143462933-9c3187b1-9a3a-441f-aa76-3aa64d295d04.png)
 
 
 Next.js ships with [API routes](https://nextjs.org/docs/api-routes/introduction) which provides an easy solution to build your own `API`.
