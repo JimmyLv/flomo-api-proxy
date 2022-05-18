@@ -21,7 +21,11 @@ export default async function handler(req, res) {
   try {
     const response = await axios({
       method: "get",
-      url: `https://flomoapp.com/api/memo`,
+      url: `https://flomoapp.com/api/memo` 
+      + req.query?.offset ? `&offset=${req.query?.offset}` : ""
+        + req.query?.limit ? `&limit=${req.query?.limit}` : ""
+            + req.query?.tag ? `&tag=${req.query?.tag}` : ""
+      ,
       headers: req.query?.flomo_session ? { cookie: `flomo_session=${req.query?.flomo_session}` } : undefined,
       withCredentials: true,
     })
