@@ -21,8 +21,8 @@ export default async function handler(req, res) {
   try {
     const response = await axios({
       method: "get",
-      url: `https://flomoapp.com/api/memo` 
-      + req.query?.offset ? `&offset=${req.query?.offset}` : ""
+      url: `https://flomoapp.com/api/memo?tz=8:0`
+        + req.query?.offset ? `&offset=${req.query?.offset}` : ""
         + req.query?.limit ? `&limit=${req.query?.limit}` : ""
             + req.query?.tag ? `&tag=${req.query?.tag}` : ""
       ,
