@@ -1,4 +1,4 @@
-# Flomo API Routes This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Flomo API Proxy
 
 ## Getting Started
 
@@ -6,21 +6,28 @@
 > 增加页码过滤
 
 请求示例
-^^curl^^
+
+**curl**
+
 ```shell
 curl --location --request GET 'https://duiliuliu.vercel.app/api/flomo?tag=&offset=50&tz=8:0&limit=10&flomo_session='
 ```
-^^fetch^^
+
+**fetch**
+
 ```js
 var requestOptions = {
-  method: 'GET',
-  redirect: 'follow'
+  method: "GET",
+  redirect: "follow",
 };
 
-fetch("https://duiliuliu.vercel.app/api/flomo?tag=&offset=50&tz=8:0&limit=10&flomo_session=", requestOptions)
-  .then(response => response.text())
-  .then(result => console.log(result))
-  .catch(error => console.log('error', error));
+fetch(
+  "https://duiliuliu.vercel.app/api/flomo?tag=&offset=50&tz=8:0&limit=10&flomo_session=",
+  requestOptions
+)
+  .then((response) => response.text())
+  .then((result) => console.log(result))
+  .catch((error) => console.log("error", error));
 ```
 
 ## Deploy on Vercel
