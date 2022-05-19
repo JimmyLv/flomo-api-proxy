@@ -5,6 +5,24 @@
 > forked from JimmyLv/flomo-api-proxy
 > 增加页码过滤
 
+请求示例
+^^curl^^
+```shell
+curl --location --request GET 'https://duiliuliu.vercel.app/api/flomo?tag=&offset=50&tz=8:0&limit=10&flomo_session='
+```
+^^fetch^^
+```js
+var requestOptions = {
+  method: 'GET',
+  redirect: 'follow'
+};
+
+fetch("https://duiliuliu.vercel.app/api/flomo?tag=&offset=50&tz=8:0&limit=10&flomo_session=", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
+```
+
 ## Deploy on Vercel
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
