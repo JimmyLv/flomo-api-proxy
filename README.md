@@ -2,8 +2,9 @@
 
 ## Getting Started
 
-> forked from JimmyLv/flomo-api-proxy
-> 增加页码过滤
+> forked from: [JimmyLv/flomo-api-proxy](https://github.com/JimmyLv/flomo-api-proxy)
+>
+> add feature:增加页码过滤
 
 请求示例
 
