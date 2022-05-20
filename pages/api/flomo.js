@@ -18,9 +18,17 @@ export default async function handler(req, res) {
   console.log(req.query)
   console.log(req.headers.cookie)
 
+  let params = {
+    offset: req.query?.offset ? req.query?.offset : "",
+    limit: req.query?.limit ? req.query?.limit : "",
+    start_date:req.query?.start_date ? req.query?.start_date : "",
+    end_date:req.query?.end_date ? req.query?.end_date : "",
+    tag:req.query?.tag ? req.query?.tag : ""
+  }
+
   let newReq = {
     method: "get",
-    url: `https://flomoapp.com/api/memo?tz=8:0&offset=${req.query?.offset ? req.query?.offset : ""}&limit=${req.query?.limit}&tag=${req.query?.tag}`,
+    url: `https://flomoapp.com/api/memo?tz=8:0&offset=${params.offset}&limit=${params.limit}&tag=${params.tag}&start_date=${params.start_date}&end_date=${params.end_date}`,
     headers: req.query?.flomo_session ? { cookie: `flomo_session=${req.query?.flomo_session}` } : undefined,
     withCredentials: true,
   }
